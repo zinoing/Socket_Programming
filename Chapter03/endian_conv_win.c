@@ -1,4 +1,4 @@
-// endian_conv_win.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// endian_conv_win.c : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <stdio.h>
