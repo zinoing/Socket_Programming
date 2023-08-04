@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
 	servAdr.sin_addr.s_addr = htonl(INADDR_ANY);
 	servAdr.sin_port = htons(atoi(argv[1]));
 
-	if(bind(hServSock, (SOCKADDR*)&servAdr, sizeof(servAdr) == SOCKET_ERROR))
+	if(bind(hServSock, (SOCKADDR*)&servAdr, sizeof(servAdr)) == SOCKET_ERROR)
 		ErrorHandling("bind() error!");
 
 	if(listen(hServSock, 5) == SOCKET_ERROR)
