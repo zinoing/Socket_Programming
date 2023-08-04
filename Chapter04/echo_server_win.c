@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
 	clntAdrSize = sizeof(clntAdr);
 
 	for (int i = 0; i < 5; i++) {
-		hClntSock = accept(hServSock, (SOCKADDR*)&servAdr, &clntAdrSize);
+		hClntSock = accept(hServSock, (SOCKADDR*)&clntAdr, &clntAdrSize);
 		if (hClntSock == -1)
 			ErrorHandling("accept() error!");
 		else
