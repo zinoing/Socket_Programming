@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
 	servAdr.sin_addr.s_addr = htonl(INADDR_ANY);
 	servAdr.sin_port = htons(atoi(argv[1]));
 
-	if (connect(hSocket, (SOCKADDR*)&servAdr, sizeof(servAdr) == SOCKET_ERROR))
+	if (connect(hSocket, (SOCKADDR*)&servAdr, sizeof(servAdr)) == SOCKET_ERROR)
 		ErrorHandling("connect() error!");
 	else
 		puts("Connected..............");
